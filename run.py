@@ -64,3 +64,10 @@ words = "basketball football baseball soccer tennis golf hockey \
         curling darts billiards bowling skating sledding \
         tobogganing bobsleigh luge snowmobiling \
         kiteboarding windsurfing parasailing".split()
+
+def get_random_word(word_list):
+    """Return a random string from the passed list of strings."""
+    word_index = random.randint(0, len(word_list) - 1)
+    return word_list[word_index]
+
+
