@@ -66,6 +66,34 @@ words = "basketball football baseball soccer tennis golf hockey \
         kiteboarding windsurfing parasailing".split()
 
 
+def show_intro():
+    """
+    Welcome them to the game and get their username.
+    let the press a key when they are ready to start playing
+    """
+    print("  /\\  /\\ __ _  _ __    __ _  _ __ ___    __ _  _ __ ")
+    print(" / /_/ // _` || '_ \\  / _` || '_ ` _ \\  / _` || '_ \\ ")
+    print("/ __  /| (_| || | | || (_| || | | | | || (_| || | | |")
+    print("\\/ /_/  \\__,_||_| |_| \\__, ||_| |_| |_| \\__,_||_| |_|")
+    print("                      |___/                          ")
+
+    username = " "
+    while True:
+        username = input("Welcome! Please enter your Name: \n")
+
+        if username.isalnum() is not True:
+            print("Error: Letters and numbers only.")
+
+        print(f"Hi {username}, You have upto 6 guesses to guess the Word.")
+        print("Each secret word relates to a different sport.yes")
+        input("When you are ready to play, Press the Enter key to start")
+        return username
+
+    print(f"Hi {username}, You have upto 6 guesses to guess the Secret Word.")
+    input("When you are ready to play, Press the Enter key to start")
+    return username
+
+
 def get_random_word(word_list):
     """Return a random string from the passed list of strings."""
     word_index = random.randint(0, len(word_list) - 1)
