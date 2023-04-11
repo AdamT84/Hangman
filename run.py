@@ -65,9 +65,40 @@ words = "basketball football baseball soccer tennis golf hockey \
         tobogganing bobsleigh luge snowmobiling \
         kiteboarding windsurfing parasailing".split()
 
+
 def get_random_word(word_list):
     """Return a random string from the passed list of strings."""
     word_index = random.randint(0, len(word_list) - 1)
     return word_list[word_index]
 
+
+# Runs main game
+print('H A N G M A N')
+MISSED_LETTERS = ''
+CORRECT_LETTERS = ''
+SECRET_WORD = get_random_word(words)
+GAME_IS_DONE = False
+PLAY_AGAIN_CHOICE = ''
+
+while not GAME_IS_DONE:
+    display_board()
+
+    # Let the player enter a letter.
+    guess = get_guess(MISSED_LETTERS + CORRECT_LETTERS)
+
+    if guess in SECRET_WORD:
+        CORRECT_LETTERS = CORRECT_LETTERS + guess
+
+        # Check if the player has won.
+        FOUND_ALL_LETTERS = True
+        for j, letter in enumerate(SECRET_WORD):
+            if SECRET_WORD[j] not in CORRECT_LETTERS:
+                FOUND_ALL_LETTERS = False
+                break
+        if FOUND_ALL_LETTERS:
+            print('Yes! The secret word is "' + SECRET_WORD +
+                  '"! You have won!')
+            GAME_IS_DONE = True
+    else:
+        MISSED_LETTERS = MISSED_LETTERS + guess
 
