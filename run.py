@@ -140,3 +140,14 @@ while not GAME_IS_DONE:
     else:
         MISSED_LETTERS = MISSED_LETTERS + guess
 
+        # Check if player has guessed too many times and lost
+        if len(MISSED_LETTERS) == len(HANGMAN_PICS) - 1:
+            display_board()
+            print(
+                'You have run out of guesses!\nAfter '
+                + str(len(MISSED_LETTERS)) +
+                ' missed guesses and ' + str(len(CORRECT_LETTERS))
+                + ' correct guesses, the word was "' + SECRET_WORD + '"')
+            GAME_IS_DONE = True
+
+
