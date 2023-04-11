@@ -116,7 +116,6 @@ MISSED_LETTERS = ''
 CORRECT_LETTERS = ''
 SECRET_WORD = get_random_word(words)
 GAME_IS_DONE = False
-PLAY_AGAIN_CHOICE = ''
 
 while not GAME_IS_DONE:
     display_board()
@@ -151,15 +150,14 @@ while not GAME_IS_DONE:
             GAME_IS_DONE = True
 
     # Check if the player wants to play again
-    while True:
-        if GAME_IS_DONE:
-            PLAY_AGAIN_CHOICE = ''
-            while PLAY_AGAIN_CHOICE not in ['yes', 'no']:
-                PLAY_AGAIN_CHOICE = input(
-                    "Do you want to play again? (yes or no): "
-                )
-                if PLAY_AGAIN_CHOICE not in ['yes', 'no']:
-                    print("Invalid choice. Please select 'yes' or 'no'.")
+    if GAME_IS_DONE:
+        PLAY_AGAIN_CHOICE = ''
+        while PLAY_AGAIN_CHOICE not in ['yes', 'no']:
+            PLAY_AGAIN_CHOICE = input(
+                "Do you want to play again? (yes or no): "
+            )
+            if PLAY_AGAIN_CHOICE not in ['yes', 'no']:
+                print("Invalid choice. Please select 'yes' or 'no'.")
 
         if PLAY_AGAIN_CHOICE == 'yes':
             MISSED_LETTERS = ''
