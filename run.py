@@ -1,48 +1,48 @@
 import random
 
-HANGMAN_PICS = ['''
+HANGMAN_PICS = [r'''
    +---+
    |   |
        |
        |
        |
        |
-=========''', '''
-   +---+
-   |   |
-   O   |
-       |
-       |
-       |
-=========''', '''
+=========''', r'''
    +---+
    |   |
    O   |
+       |
+       |
+       |
+=========''', r'''
+   +---+
+   |   |
+   O   |
    |   |
        |
        |
-=========''', '''
+=========''',  r'''
    +---+
    |   |
    O   |
   /|   |
        |
        |
-=========''', '''
+=========''', r'''
    +---+
    |   |
    O   |
   /|\  |
        |
        |
-=========''', '''
+=========''', r'''
    +---+
    |   |
    O   |
   /|\  |
   /    |
        |
-=========''', '''
+=========''', r'''
    +---+
    |   |
    O   |
@@ -50,6 +50,7 @@ HANGMAN_PICS = ['''
   / \  |
        |
 =========''']
+
 
 words = "basketball football baseball soccer tennis golf hockey \
         volleyball rugby badminton tabletennis swimming athletics \
@@ -136,6 +137,9 @@ def get_guess(already_guessed):
             print('Please enter a letter.')
         else:
             return new_guess
+
+
+show_intro()
 
 
 # Runs main game
