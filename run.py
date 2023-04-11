@@ -72,6 +72,44 @@ def get_random_word(word_list):
     return word_list[word_index]
 
 
+def display_board():
+    """Display the current state of the game board."""
+    print(HANGMAN_PICS[len(MISSED_LETTERS)])
+    print()
+
+    print('Missed letters:', end=' ')
+    for char in MISSED_LETTERS:
+        print(char, end=' ')
+    print()
+
+    blanks = '_' * len(SECRET_WORD)
+
+    for i, char in enumerate(SECRET_WORD):
+        # Replace blanks with correctly guessed letters
+        if char in CORRECT_LETTERS:
+            blanks = blanks[:i] + char + blanks[i+1:]
+
+    for char in blanks:
+        # Show the secret word with spaces in between each letter
+        print(char, end=' ')
+    print()
+
+
+def get_guess(already_guessed):
+    """Get the letter the player entered."""
+    while True:
+        print('Guess a letter.')
+        new_guess = input().lower()
+        if len(new_guess) != 1:
+            print('Please enter a single letter.')
+        elif new_guess in already_guessed:
+            print('You have already guessed that letter. Choose again.')
+        elif new_guess not in 'abcdefghijklmnopqrstuvwxyz':
+            print('Please enter a letter.')
+        else:
+            return new_guess
+
+
 # Runs main game
 print('H A N G M A N')
 MISSED_LETTERS = ''
