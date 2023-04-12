@@ -70,7 +70,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ![Game win](/screenshots/game_win.png)
 
-- If no they will be thanked for playing and the game will end.
+- If no is selected then they will be thanked for playing and the game will end.
 
 ![Game over](/screenshots/game_restart_no.png)
 
