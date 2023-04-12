@@ -29,7 +29,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ## Design
 
-- As this game is desgined to run on a terminal based window ASCII art has been added to the intro screen to make it more visually appealing and ensure the text is well spaced to make it easier to read. 
+- As this game is desgined to run on a terminal window ASCII art has been added to the intro screen to make it more visually appealing and ensuring the text is well spaced to make it easier to read. 
 - I have used the clear function to ensure the terminal is kept clear after each user input.
 
 ## Existing Features
@@ -43,7 +43,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 ### Game Instructions
 
 - Once the user has entered their name and pressed enter they will be presented with the game instructions, informing them of the number of guesses allowed and a hint as to what the words relate too.
-- The player can then select enter to being the game when they are ready.
+- The player can then select enter to begin the game when they are ready.
 
 ![Instructions](/screenshots/game_instructions.png)
 
@@ -54,7 +54,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ![Main game](/screenshots/game_screen.png)
 
-- If the letter they guess is correct then the gallows will remain empty and they will see that letter add in the relevant place on the board. 
+- If the letter they guess is correct then the gallows will remain empty and they will see that letter added in the relevant place on the board. 
 
 ![Correct letter](/screenshots/correct_letter.png)
 
@@ -64,14 +64,11 @@ The purpose of this site is allow players of all ages to test their logic and gu
 ![Wrong letter](/screenshots/wrong_letter.png)
 
 - Once the game is over if the user has lost, they will be told how many wrong and how many correct guess they made and what the word was. Winners will be told they have won
+- The user will then be asked if they wish to play again with a yes or no response. 
 
 ![Game loss](/screenshots/game_loss.png)
 
 ![Game win](/screenshots/game_win.png)
-
-- The user will then be asked if they wish to play again with a yes or no response. 
-
-![Play again](/screenshots/game_restart.png)
 
 - If no they will be thanked for playing and the game will end.
 
@@ -79,7 +76,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 - If they select yes the will be taken back to the main game.
 
-![Main game](/screenshots/game_screen.png)
+![Main game](/screenshots/game_restart.png)
 
 
 ### Future Features
@@ -140,7 +137,7 @@ There are no unfixed bugs
 
 ### Content
 
-I have listed below the main sites that have helped me complete this project. I spent time looking at tutorials and other games online on sites such as Stack Overflow and Slack and videos on YouTube for ideas and inspiration, but found the below resources extremely helpful. I would also like to thank my CI mentor Chris Quinn for his advice and motivation throughout this project. 
+I have listed the main sites that have helped me complete this project. I spent time looking at tutorials and other games online on sites such as Stack Overflow and Slack and videos on YouTube for ideas and inspiration, but found the below resources extremely helpful. I would also like to thank my CI mentor Chris Quinn for his advice and motivation throughout this project. 
 
 - This site was extremely helpful and showed me multpile options to code this game. [Invent with Python](https://inventwithpython.com).
 - How to buid hangman tuitorial by Kite on [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) was very helpful.
