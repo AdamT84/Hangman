@@ -5,6 +5,7 @@ Import OS to allow determination of users os for clear function.
 
 import random
 import os
+import getpass
 
 HANGMAN_PICS = [r'''
    +---+
@@ -106,7 +107,9 @@ def show_intro():
     print()
     print("Each secret word relates to a different car manfacturer.")
     print()
-    input("When you are ready to play, press the Enter key to start \n")
+    getpass.getpass(
+        "When you are ready to play, press the Enter key to start. \n"
+    )
     clear_terminal()
 
 

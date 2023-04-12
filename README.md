@@ -123,11 +123,11 @@ There are no unfixed bugs
 
 - Create a new app on Heroku by clicking the "New" button on your Heroku dashboard and selecting "Create new app." Give your app a name and select the region you want to deploy to (US or Europe).
 
+- Configure your Heroku app by adding any necessary environment variables or add-ons your app needs to run. You can do this by going to the "Settings" tab on your app's dashboard.
+
 - Connect your Heroku app to your GitHub repository by going to the "Deploy" tab on your app's dashboard and selecting "GitHub" as your deployment method. Then, connect to the repository that contains the code you want to deploy.
 
 - Choose the branch you want to deploy from your GitHub repository. You can also set up automatic deploys so that your app is automatically deployed to Heroku whenever you push changes to your chosen branch.
-
-- Configure your Heroku app by adding any necessary environment variables or add-ons your app needs to run. You can do this by going to the "Settings" tab on your app's dashboard.
 
 - Deploy your app by clicking the "Deploy Branch" button on the "Deploy" tab. Heroku will build and deploy your app from the code on your selected branch.
 
