@@ -97,10 +97,12 @@ def show_intro():
         else:
             clear_terminal()
             break
-
-    print(f"Hi {username}, You have upto 6 guesses to guess the Word.")
     print()
-    print("If you don't guess the word, the man is hung and you lose")
+    print(
+        f"Hi {username}, You have upto 6 guesses to guess the hidden word."
+    )
+    print()
+    print("If you don't guess the word, the man will hang and you lose.")
     print()
     print("Each secret word relates to a different car manfacturer.")
     print()
