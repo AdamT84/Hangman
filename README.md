@@ -1,5 +1,8 @@
 # Welcome to Classic Hangman
 
+![App overview](/screenshots/overview.png)
+
+[View the live site here](https://hangman-classic.herokuapp.com/)
 
 ## Introduction
 
@@ -26,7 +29,8 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ## Design
 
-As this game is desgined to run on a terminal based window ASCII art has been added to the intro screen to make it more visually appealing and ensure the text is well spaced to make it easier to read. 
+- As this game is desgined to run on a terminal based window ASCII art has been added to the intro screen to make it more visually appealing and ensure the text is well spaced to make it easier to read. 
+- I have used the clear function to ensure the terminal is kept clear after each user input.
 
 ## Existing Features
 
@@ -34,24 +38,48 @@ As this game is desgined to run on a terminal based window ASCII art has been ad
 
 - Once the game is run, the user will be presented with the introduction screen. This screen features some ASCII art spelling out hangman, and requests the users name. 
 
+![Introduction](/screenshots/intro.png)
+
 ### Game Instructions
 
 - Once the user has entered their name and pressed enter they will be presented with the game instructions, informing them of the number of guesses allowed and a hint as to what the words relate too.
 - The player can then select enter to being the game when they are ready.
 
+![Instructions](/screenshots/game_instructions.png)
+
+
 ### Game Play
 
-- Once the user is in the game they will be able to see the empty gallows and an instruction to guess a letter.
+- Once the user is in the game they will be able to see the game title and empty gallows and an instruction to guess a letter.
+
+![Main game](/screenshots/game_screen.png)
 
 - If the letter they guess is correct then the gallows will remain empty and they will see that letter add in the relevant place on the board. 
 
-- If the letter they guess is incorrect then the first part of the man will appear on the gallows and the letter will appear in the "wrong guesses" area. 
+![Correct letter](/screenshots/correct_letter.png)
 
+- If the letter they guess is incorrect then the first part of the man will appear on the gallows and the letter will appear in the "wrong guesses" area. 
 - This will repeat until the user correctly guesses the word or they hit 6 guesses filling the gallows and hanging the man. 
+
+![Wrong letter](/screenshots/wrong_letter.png)
 
 - Once the game is over if the user has lost, they will be told how many wrong and how many correct guess they made and what the word was. Winners will be told they have won
 
+![Game loss](/screenshots/game_loss.png)
+
+![Game win](/screenshots/game_win.png)
+
 - The user will then be asked if they wish to play again with a yes or no response. 
+
+![Play again](/screenshots/game_restart.png)
+
+- If no they will be thanked for playing and the game will end.
+
+![Game over](/screenshots/game_restart_no.png)
+
+- If they select yes the will be taken back to the main game.
+
+![Main game](/screenshots/game_screen.png)
 
 
 ### Future Features
@@ -78,7 +106,6 @@ As this game is desgined to run on a terminal based window ASCII art has been ad
 
 - The Code Institute's GitHub full template for Python is used in order for the program to display properly in the deployed site on Heroku.
 
-
 ## Testing
 
 Information on testing performed is located in a separate testing file 
@@ -86,6 +113,8 @@ Information on testing performed is located in a separate testing file
 ## Bugs 
 
 ### Solved bugs
+
+After adding in the HANGMAN_PICS feature I started getting multiple errors in my code. The error was "Anomalous backslash in string: '\ '." This was caused as the ASCII image uses backslashes which are flagged as invalid escape method. I resolved this by prefixing the string with r. 
 
 ### Unfixed bugs
 
@@ -95,13 +124,17 @@ There are no unfixed bugs
 
 ### Deploy to Heroku
 
-- Go to the Heroku Dashboard.
-- Click New.
-- Select to create a new app.
-- Add Config Var's for Creds and Port
-- Set the buildbacks to Python and NodeJS in that order.
-- Link the Heroku app to the repository.
-- Click on Deploy.
+- Create a new app on Heroku by clicking the "New" button on your Heroku dashboard and selecting "Create new app." Give your app a name and select the region you want to deploy to (US or Europe).
+
+- Connect your Heroku app to your GitHub repository by going to the "Deploy" tab on your app's dashboard and selecting "GitHub" as your deployment method. Then, connect to the repository that contains the code you want to deploy.
+
+- Choose the branch you want to deploy from your GitHub repository. You can also set up automatic deploys so that your app is automatically deployed to Heroku whenever you push changes to your chosen branch.
+
+- Configure your Heroku app by adding any necessary environment variables or add-ons your app needs to run. You can do this by going to the "Settings" tab on your app's dashboard.
+
+- Deploy your app by clicking the "Deploy Branch" button on the "Deploy" tab. Heroku will build and deploy your app from the code on your selected branch.
+
+- Monitor your app's deployment and check its logs for any errors or issues that arise. You can view your app's logs by going to the "More" menu on your app's dashboard and selecting "View logs."
 
 ## Credits
 
