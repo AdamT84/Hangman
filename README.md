@@ -73,7 +73,7 @@ As this game is desgined to run on a terminal based window ASCII art has been ad
 - [GitHub](https://github.com/)
     - GitHub was used to store the project after performing a push from GitPod.
 
-- [Heroku](https://heroku.com/)
+- [Heroku](https://www.heroku.com/home)
     - Heroku is used to build, run and scale applications in a similar manner across most languages.
 
 - The Code Institute's GitHub full template for Python is used in order for the program to display properly in the deployed site on Heroku.

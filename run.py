@@ -1,8 +1,10 @@
 """
 Import random to allow randon word selection
+Import OS to allow determination of users os for clear function.
 """
 
 import random
+import os
 
 HANGMAN_PICS = [r'''
    +---+
@@ -66,6 +68,11 @@ words = "Acura AlfaRomeo AstonMartin Audi Bentley BMW \
          Suzuki Tesla Toyota Volkswagen Volvo".lower().split()
 
 
+def clear_terminal():
+    """Clears the terminal screen"""
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def show_intro():
     """
     Welcome them to the game and get their username.
@@ -87,15 +94,18 @@ def show_intro():
 
         if username.isalnum() is not True:
             print("Error: Letters and numbers only.")
+        else:
+            clear_terminal()
+            break
 
-        print(f"Hi {username}, You have upto 6 guesses to guess the Word.")
-        print()
-        print("If you don't guess the word, the man is hung and you lose")
-        print()
-        print("Each secret word relates to a different car manfacturer.")
-        print()
-        input("When you are ready to play, press the Enter key to start \n")
-        return username
+    print(f"Hi {username}, You have upto 6 guesses to guess the Word.")
+    print()
+    print("If you don't guess the word, the man is hung and you lose")
+    print()
+    print("Each secret word relates to a different car manfacturer.")
+    print()
+    input("When you are ready to play, press the Enter key to start \n")
+    clear_terminal()
 
 
 def get_random_word(word_list):
@@ -106,6 +116,8 @@ def get_random_word(word_list):
 
 def game_board():
     """Display the current state of the game board."""
+    clear_terminal()
+    print('H A N G M A N')
     print(HANGMAN_PICS[len(INCORRECT_LETTERS)])
     print()
 
@@ -146,7 +158,6 @@ show_intro()
 
 
 # Runs main game
-print('H A N G M A N')
 INCORRECT_LETTERS = ''
 CORRECT_LETTERS = ''
 HIDDEN_WORD = get_random_word(words)
