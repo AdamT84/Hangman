@@ -105,7 +105,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ## Testing
 
-Information on testing performed is located in a separate testing file 
+Information on testing performed is located in a separate testing file [Here](/TESTING.md)
 
 ## Bugs 
 

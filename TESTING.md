@@ -10,38 +10,93 @@
 
 ### Testing user stories. 
 
-
 #### First Time Player. 
 
-
-1. As a new player, I want to be able to easily understand the game purpose and find instructions about it.
-    - The start screen tells the user the name of the game and that it is a game of chance.
-    - There is a rules button allowing the user to view the easy to follow rules diagram.
+1. As a first time player, I want to be able to easily find instructions about it.
+    - The start screen tells the user the name of the game.
+    - The rules are clearly stated on the game instructions section.
     - On the main game screen the user is told how to start the game.
 
-2. As a new player, I want to be able to take my time and not be rushed.
-    - There is no timing function used, the player decides the speed of the game.
+2. As a first time player, I want to know easily if I won or lost. 
+    - The progressive gallows and game over message clearly tell the user if they have won or lost.
 
-3. As a new player, I want to know easily if I have won or lost the round.
-    - The result of each round is displayed clearly in the results area. 
-    - After the player or the computer gets 10 wins the game ends and the user is clearly informed if they have won or lost.
+3. As a first time plater, I want to be told what the secret word was if I lost.
+    - Both winners and losers are told the secret word
 
-4. As a new player, I want to view the website and content clearly on my mobile devices. 
-    - The website has been designed with mobile devices in mind and fully tested to ensure all aspects of the site are responsive. 
-
-#### Frequent Player Goals
+#### Frequent Player
 
 1. As a frequent player I want to feel the game is random and I can both win and lose.
-    - The game is truly random as the computer player is programmed to select a random choice each time. There are no patterns or preferences to pick a certain option.
-    - The choice selected by both player and computer are displayed.
+   - The game is truly random as the computer player is programmed to select a random choice each time. There are no patterns or preferences to pick a certain option.
 
-2. As a frequent player I want to ensure I can see my score and the computers score.
-    - The scores for both player, computer and ties are tracked correctly throughout the game.
-
-3. As a frequent player I want to start the game quickly without having to look at instructions or rules.
-    - The player can click play on the start screen and begin play immediately without being prompted to look at the rules.
-
+2. As a frequent player I want to start the game quickly without having to look at instructions or rules.
+    
 
 ### Manual Testing
+ 
+#### App Load
 
-Continual testing was performed during the development of this site by using DevTools, ensuring that not only did the layout look as intended but also behaved as intended. Once the site had been uploaded to GitHub repository more thorough testing was completed as outlined below.
+- Ensure the app loads correctly.
+
+![App load](/screenshots/gifs/app_load.gif)
+
+#### Introduction Data Validation
+
+- Ensure the user can only enter numbers and letters for their username.
+- Ensure that once the username is entered and user pressed enter the screen moved to game info.
+
+![Introduction Validation](/screenshots/gifs/enter_name_validation.gif)
+
+#### Game Play
+
+- Ensure that the main game screen loads when user presses enter to start the game.
+
+![Game start](/screenshots/gifs/game_start.gif)
+
+- Ensure that the users guesses are displayed correctly for correct and incorrect guesses.
+
+- Ensure gallows progresses for incorrect answers.
+
+- Ensure terminal clears after each guess.
+
+![Game play](/screenshots/gifs/letters.gif)
+
+- Ensure that only single letters can be entered for a guess.
+
+![Letters only](/screenshots/gifs/guess_validation.gif)
+
+![Multiple letters](/screenshots/gifs/multiple_letters.gif)
+
+- Ensure user is informed if they select a letter they have already chosen.
+
+![Duplicate guess](/screenshots/gifs/duplicate_choice.gif)
+
+- Ensure the win message is displayed when user wins.
+
+- Ensure the user is asked to play again after a win.
+
+![Game win](/screenshots/gifs/game_win.gif)
+
+- Ensure the lose message is displayed when the user loses.
+
+- Ensure the user is asked to play again after a loss.
+
+- Ensure user gets goodbye message if they select no to play again.
+
+![Game loss](/screenshots/gifs/play_again_no.gif)
+
+- Ensure the game reloads correctly if user selects yes to play again.
+
+![Game restart](/screenshots/gifs/play_again_yes.gif)
+
+- Ensure the user must choose yes or no in response to play again.
+
+![Play again validation](/screenshots/gifs/play_again_validation.gif)
+
+
+### Automated Testing
+
+#### Code Validation
+
+- The python code was passwed through the [CI Python Linter](https://pep8ci.herokuapp.com/) without any errors.
+
+[Main README.md file](/README.md)
