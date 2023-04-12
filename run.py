@@ -1,3 +1,7 @@
+"""
+Import random to allow randon word selection
+"""
+
 import random
 
 HANGMAN_PICS = [r'''
@@ -52,19 +56,14 @@ HANGMAN_PICS = [r'''
 =========''']
 
 
-words = "basketball football baseball soccer tennis golf hockey \
-        volleyball rugby badminton tabletennis swimming athletics \
-        gymnastics wrestling boxing cycling skiing snowboarding \
-        archery shooting fencing rowing kayaking canoeing diving \
-        weightlifting powerlifting bodybuilding triathlon marathon \
-        pentathlon decathlon surfing skateboarding rockclimbing \
-        mountaineering fishing hunting horsebackriding \
-        polo squash racquetball lacrosse ultimatefrisbee \
-        kickboxing karate taekwondo judo aikido capoeira \
-        jiu-jitsu muaythai crossfit parkour calisthenics bocce croquet \
-        curling darts billiards bowling skating sledding \
-        tobogganing bobsleigh luge snowmobiling \
-        kiteboarding windsurfing parasailing".split()
+words = ["Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW",
+         "Bugatti", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge",
+         "Ferrari", "Fiat", "Ford", "GMC", "Honda", "Hyundai", "Infiniti",
+         "Jaguar", "Jeep", "Kia", "Koenigsegg", "Lamborghini", "Land Rover",
+         "Lexus", "Lincoln", "Lotus", "Maserati", "Mazda", "McLaren",
+         "Mercedes-Benz", "Mini", "Mitsubishi", "Nissan", "Noble", "Pagani",
+         "Polestar", "Porsche", "Ram", "Rimac", "Rolls-Royce", "Subaru",
+         "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo"]
 
 
 def show_intro():
@@ -81,7 +80,10 @@ def show_intro():
 
     username = " "
     while True:
-        username = input("Welcome! Please enter your Name: \n")
+        username = input(
+            "Welcome to Hangman! Please enter your name: \n"
+            )
+        print()
 
         if username.isalnum() is not True:
             print("Error: Letters and numbers only.")
@@ -92,7 +94,7 @@ def show_intro():
         print()
         print("Each secret word relates to a different sport.")
         print()
-        input("When you are ready to play, Press the Enter key to start \n")
+        input("When you are ready to play, press the Enter key to start \n")
         return username
 
 
@@ -102,25 +104,25 @@ def get_random_word(word_list):
     return word_list[word_index]
 
 
-def display_board():
+def game_board():
     """Display the current state of the game board."""
-    print(HANGMAN_PICS[len(MISSED_LETTERS)])
+    print(HANGMAN_PICS[len(INCORRECT_LETTERS)])
     print()
 
     print('Missed letters:', end=' ')
-    for char in MISSED_LETTERS:
+    for char in INCORRECT_LETTERS:
         print(char, end=' ')
     print()
 
-    blanks = '_' * len(SECRET_WORD)
+    blanks = '_' * len(HIDDEN_WORD)
 
-    for i, char in enumerate(SECRET_WORD):
+    for i, char in enumerate(HIDDEN_WORD):
         # Replace blanks with correctly guessed letters
         if char in CORRECT_LETTERS:
             blanks = blanks[:i] + char + blanks[i+1:]
 
     for char in blanks:
-        # Show the secret word with spaces in between each letter
+        # Show the secret word
         print(char, end=' ')
     print()
 
@@ -145,58 +147,60 @@ show_intro()
 
 # Runs main game
 print('H A N G M A N')
-MISSED_LETTERS = ''
+INCORRECT_LETTERS = ''
 CORRECT_LETTERS = ''
-SECRET_WORD = get_random_word(words)
-GAME_IS_DONE = False
+HIDDEN_WORD = get_random_word(words)
+GAME_OVER = False
 
-while not GAME_IS_DONE:
-    display_board()
+while not GAME_OVER:
+    game_board()
 
     # Let the player enter a letter.
-    guess = get_guess(MISSED_LETTERS + CORRECT_LETTERS)
+    guess = get_guess(INCORRECT_LETTERS + CORRECT_LETTERS)
 
-    if guess in SECRET_WORD:
+    if guess in HIDDEN_WORD:
         CORRECT_LETTERS = CORRECT_LETTERS + guess
 
         # Check if the player has won.
         FOUND_ALL_LETTERS = True
-        for j, letter in enumerate(SECRET_WORD):
-            if SECRET_WORD[j] not in CORRECT_LETTERS:
+        for j, letter in enumerate(HIDDEN_WORD):
+            if HIDDEN_WORD[j] not in CORRECT_LETTERS:
                 FOUND_ALL_LETTERS = False
                 break
         if FOUND_ALL_LETTERS:
-            print('Yes! The secret word is "' + SECRET_WORD +
+            print('Yes! The secret word is "' + HIDDEN_WORD +
                   '"! You have won!')
-            GAME_IS_DONE = True
+            print()
+            GAME_OVER = True
     else:
-        MISSED_LETTERS = MISSED_LETTERS + guess
+        INCORRECT_LETTERS = INCORRECT_LETTERS + guess
 
         # Check if player has guessed too many times and lost
-        if len(MISSED_LETTERS) == len(HANGMAN_PICS) - 1:
-            display_board()
+        if len(INCORRECT_LETTERS) == len(HANGMAN_PICS) - 1:
+            game_board()
             print(
                 'You have run out of guesses!\nAfter '
-                + str(len(MISSED_LETTERS)) +
+                + str(len(INCORRECT_LETTERS)) +
                 ' missed guesses and ' + str(len(CORRECT_LETTERS))
-                + ' correct guesses, the word was "' + SECRET_WORD + '"')
-            GAME_IS_DONE = True
+                + ' correct guesses, the word was "' + HIDDEN_WORD + '"')
+            print()
+            GAME_OVER = True
 
     # Check if the player wants to play again
-    if GAME_IS_DONE:
-        PLAY_AGAIN_CHOICE = ''
-        while PLAY_AGAIN_CHOICE not in ['yes', 'no']:
-            PLAY_AGAIN_CHOICE = input(
+    if GAME_OVER:
+        while True:
+            PLAY_AGAIN = input(
                 "Do you want to play again? (yes or no): "
-            )
-            if PLAY_AGAIN_CHOICE not in ['yes', 'no']:
-                print("Invalid choice. Please select 'yes' or 'no'.")
-
-        if PLAY_AGAIN_CHOICE == 'yes':
-            MISSED_LETTERS = ''
-            CORRECT_LETTERS = ''
-            GAME_IS_DONE = False
-            SECRET_WORD = get_random_word(words)
-        else:
-            print("Thanks for playing Hangman! Come back soon.")
-            break
+            ).lower()
+            if PLAY_AGAIN == 'yes':
+                INCORRECT_LETTERS = ''
+                CORRECT_LETTERS = ''
+                GAME_OVER = False
+                HIDDEN_WORD = get_random_word(words)
+                break
+            if PLAY_AGAIN == 'no':
+                print()
+                print("Thanks for playing Hangman! Come back soon.")
+                break
+            print("Invalid choice. Please select 'yes' or 'no'.")
+            print()
