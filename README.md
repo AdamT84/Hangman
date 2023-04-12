@@ -10,7 +10,7 @@ Hangman is a game that originated in 17th century Europe and was played when a w
 
 The prisoner was strung up over a 5–legged stand, then a blank word would be presented by the executioner. With each incorrect guess, a leg would be knocked away. If the word was guessed correctly, the prisoner would be set free, if not, once all 5 legs were chopped, he would hang. This “game” definitely had dark beginnings, but in time, has grown to a much more fun-loving game kids of all ages.
 
-The purpose of this site is allow players of all ages to test their logic and guessing ability against the computer. With over 40 possible words that are selected at random the game can be played multiple times before the same word re-appears.
+The purpose of this site is to allow players of all ages to test their logic and guessing ability against the computer. With over 40 possible words that are selected at random the game can be played multiple times before the same word re-appears.
 
 ## User Experience Design
 
@@ -29,20 +29,20 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ## Design
 
-- As this game is desgined to run on a terminal window ASCII art has been added to the intro screen to make it more visually appealing and ensuring the text is well spaced to make it easier to read. 
+- As this game is designed to run on a terminal window ASCII art has been added to the intro screen to make it more visually appealing and ensuring the text is well spaced to make it easier to read. 
 - I have used the clear function to ensure the terminal is kept clear after each user input.
 
 ## Existing Features
 
 ### Introduction 
 
-- Once the game is run, the user will be presented with the introduction screen. This screen features some ASCII art spelling out hangman, and requests the users name. 
+- Once the game is run, the user will be presented with the introduction screen. This screen features some ASCII art spelling out hangman, and requests the user's name. 
 
 ![Introduction](/screenshots/intro.png)
 
 ### Game Instructions
 
-- Once the user has entered their name and pressed enter they will be presented with the game instructions, informing them of the number of guesses allowed and a hint as to what the words relate too.
+- Once the user has entered their name and pressed enter, they will be presented with the game instructions, informing them of the number of guesses allowed and a hint as to what the words relate too.
 - The player can then select enter to begin the game when they are ready.
 
 ![Instructions](/screenshots/game_instructions.png)
@@ -50,7 +50,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ### Game Play
 
-- Once the user is in the game they will be able to see the game title and empty gallows and an instruction to guess a letter.
+- Once the user is in the game, they will be able to see the game title and empty gallows and an instruction to guess a letter.
 
 ![Main game](/screenshots/game_screen.png)
 
@@ -63,7 +63,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ![Wrong letter](/screenshots/wrong_letter.png)
 
-- Once the game is over if the user has lost, they will be told how many wrong and how many correct guess they made and what the word was. Winners will be told they have won
+- Once the game is over if the user has lost, they will be told how many wrong and how many correct guesses they made and what the word was. Winners will be told they have won
 - The user will then be asked if they wish to play again with a yes or no response. 
 
 ![Game loss](/screenshots/game_loss.png)
@@ -74,7 +74,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ![Game over](/screenshots/game_restart_no.png)
 
-- If they select yes the will be taken back to the main game.
+- If they select yes, the will be taken back to the main game.
 
 ![Main game](/screenshots/game_restart.png)
 
@@ -86,7 +86,7 @@ The purpose of this site is allow players of all ages to test their logic and gu
 
 ## Technologies Used
 
-### Langages Used
+### Languages Used
 
 - Python3
 
@@ -139,8 +139,8 @@ There are no unfixed bugs
 
 I have listed the main sites that have helped me complete this project. I spent time looking at tutorials and other games online on sites such as Stack Overflow and Slack and videos on YouTube for ideas and inspiration, but found the below resources extremely helpful. I would also like to thank my CI mentor Chris Quinn for his advice and motivation throughout this project. 
 
-- This site was extremely helpful and showed me multpile options to code this game. [Invent with Python](https://inventwithpython.com).
-- How to buid hangman tuitorial by Kite on [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) was very helpful.
+- This site was extremely helpful and showed me multiple options to code this game. [Invent with Python](https://inventwithpython.com).
+- How to build hangman tutorial by Kite on [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) was very helpful.
 - My ASCII art was taken from KeoCode's GitHub repository [Keo Code](https://github.com/KeoCode/Hangman).
 
 

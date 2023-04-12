@@ -25,10 +25,10 @@
 
 #### Frequent Player
 
-1. As a frequent player I want to feel the game is random and I can both win and lose.
+1. As a frequent player, I want to feel the game is random and I can both win and lose.
    - The game is truly random as the computer player is programmed to select a random choice each time. There are no patterns or preferences to pick a certain option.
 
-2. As a frequent player I want to start the game quickly without having to look at instructions or rules.
+2. As a frequent player, I want to start the game quickly without having to look at instructions or rules.
     
 
 ### Manual Testing
@@ -97,6 +97,8 @@
 
 #### Code Validation
 
-- The python code was passwed through the [CI Python Linter](https://pep8ci.herokuapp.com/) without any errors.
+- The python code was passed through the [CI Python Linter](https://pep8ci.herokuapp.com/) without any errors.
+
+![Python CI Linter](/screenshots/ci_linter.png)
 
 [Main README.md file](/README.md)
