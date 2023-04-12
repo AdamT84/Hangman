@@ -109,7 +109,7 @@ def game_board():
     print(HANGMAN_PICS[len(INCORRECT_LETTERS)])
     print()
 
-    print('Missed letters:', end=' ')
+    print('Wrong guesses:', end=' ')
     for char in INCORRECT_LETTERS:
         print(char, end=' ')
     print()
@@ -135,7 +135,7 @@ def get_guess(already_guessed):
         if len(new_guess) != 1:
             print('Please enter a single letter.')
         elif new_guess in already_guessed:
-            print('You have already guessed that letter. Choose again.')
+            print('Oops! You have already guessed that letter. Choose again.')
         elif new_guess not in 'abcdefghijklmnopqrstuvwxyz':
             print('Please enter a letter.')
         else:
@@ -168,7 +168,7 @@ while not GAME_OVER:
                 FOUND_ALL_LETTERS = False
                 break
         if FOUND_ALL_LETTERS:
-            print('Yes! The secret word is "' + HIDDEN_WORD +
+            print('Woohoo! The secret word is "' + HIDDEN_WORD +
                   '"! You have won!')
             print()
             GAME_OVER = True
@@ -181,7 +181,7 @@ while not GAME_OVER:
             print(
                 'You have run out of guesses!\nAfter '
                 + str(len(INCORRECT_LETTERS)) +
-                ' missed guesses and ' + str(len(CORRECT_LETTERS))
+                ' wrong guesses and ' + str(len(CORRECT_LETTERS))
                 + ' correct guesses, the word was "' + HIDDEN_WORD + '"')
             print()
             GAME_OVER = True
