@@ -1,4 +1,4 @@
-# Welcome to Rock, Paper, Scissors, Lizard, Spock - Testing
+# Welcome to Classic Hangman - Testing
 
 [Main README.md file](/README.md)  
 
