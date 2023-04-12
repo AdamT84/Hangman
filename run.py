@@ -92,7 +92,7 @@ def show_intro():
         print()
         print("If you don't guess the word, the man is hung and you lose")
         print()
-        print("Each secret word relates to a different sport.")
+        print("Each secret word relates to a different car manfacturer.")
         print()
         input("When you are ready to play, press the Enter key to start \n")
         return username
