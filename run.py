@@ -72,6 +72,7 @@ def show_intro():
     Welcome them to the game and get their username.
     let the press a key when they are ready to start playing
     """
+
     print("  /\\  /\\ __ _  _ __    __ _  _ __ ___    __ _  _ __ ")
     print(" / /_/ // _` || '_ \\  / _` || '_ ` _ \\  / _` || '_ \\ ")
     print("/ __  /| (_| || | | || (_| || | | | | || (_| || | | |")
@@ -86,13 +87,13 @@ def show_intro():
             print("Error: Letters and numbers only.")
 
         print(f"Hi {username}, You have upto 6 guesses to guess the Word.")
-        print("Each secret word relates to a different sport.yes")
-        input("When you are ready to play, Press the Enter key to start")
+        print()
+        print("If you don't guess the word, the man is hung and you lose")
+        print()
+        print("Each secret word relates to a different sport.")
+        print()
+        input("When you are ready to play, Press the Enter key to start \n")
         return username
-
-    print(f"Hi {username}, You have upto 6 guesses to guess the Secret Word.")
-    input("When you are ready to play, Press the Enter key to start")
-    return username
 
 
 def get_random_word(word_list):
