@@ -56,14 +56,14 @@ HANGMAN_PICS = [r'''
 =========''']
 
 
-words = ["Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW",
-         "Bugatti", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge",
-         "Ferrari", "Fiat", "Ford", "GMC", "Honda", "Hyundai", "Infiniti",
-         "Jaguar", "Jeep", "Kia", "Koenigsegg", "Lamborghini", "Land Rover",
-         "Lexus", "Lincoln", "Lotus", "Maserati", "Mazda", "McLaren",
-         "Mercedes-Benz", "Mini", "Mitsubishi", "Nissan", "Noble", "Pagani",
-         "Polestar", "Porsche", "Ram", "Rimac", "Rolls-Royce", "Subaru",
-         "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo"]
+words = "Acura AlfaRomeo AstonMartin Audi Bentley BMW \
+         Bugatti Buick Cadillac Chevrolet Chrysler Dodge \
+         Ferrari Fiat Ford GMC Honda Hyundai Infiniti \
+         Jaguar Jeep Kia Koenigsegg Lamborghini Land Rover \
+         Lexus Lincoln Lotus Maserati Mazda McLaren \
+         Mercedes Mini Mitsubishi Nissan Noble Pagani \
+         Polestar Porsche Ram Rimac RollsRoyce Subaru \
+         Suzuki Tesla Toyota Volkswagen Volvo".split()
 
 
 def show_intro():
