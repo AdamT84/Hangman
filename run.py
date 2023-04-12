@@ -201,7 +201,7 @@ while not GAME_OVER:
     if GAME_OVER:
         while True:
             PLAY_AGAIN = input(
-                "Do you want to play again? (yes or no): "
+                "Do you want to play again? (yes or no): \n"
             ).lower()
             if PLAY_AGAIN == 'yes':
                 INCORRECT_LETTERS = ''
