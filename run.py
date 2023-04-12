@@ -63,7 +63,7 @@ words = "Acura AlfaRomeo AstonMartin Audi Bentley BMW \
          Lexus Lincoln Lotus Maserati Mazda McLaren \
          Mercedes Mini Mitsubishi Nissan Noble Pagani \
          Polestar Porsche Ram Rimac RollsRoyce Subaru \
-         Suzuki Tesla Toyota Volkswagen Volvo".split()
+         Suzuki Tesla Toyota Volkswagen Volvo".lower().split()
 
 
 def show_intro():
