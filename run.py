@@ -100,7 +100,7 @@ def show_intro():
             break
     print()
     print(
-        f"Hi {username}, You have upto 6 guesses to guess the hidden word."
+        f"Hi {username}, You only have 6 guesses to find the hidden word."
     )
     print()
     print("If you don't guess the word, the man will hang and you lose.")
