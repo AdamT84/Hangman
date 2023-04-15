@@ -168,6 +168,6 @@ I have listed the main sites that have helped me complete this project. I spent 
 - This site was extremely helpful and showed me multiple options to code this game. [Invent with Python](https://inventwithpython.com).
 - How to build hangman tutorial by Kite on [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) was very helpful.
 - My ASCII art was taken from KeoCode's GitHub repository [Keo Code](https://github.com/KeoCode/Hangman).
-- Background on the origins of the Hangman game [Quora]!(https://www.quora.com/What-is-the-origin-of-the-game-hangman).
+- Background on the origins of the Hangman game [Quora](https://www.quora.com/What-is-the-origin-of-the-game-hangman).
 
 
