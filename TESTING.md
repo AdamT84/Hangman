@@ -93,9 +93,7 @@
 ![Play again validation](/screenshots/gifs/play_again_validation.gif)
 
 
-### Automated Testing
-
-#### Code Validation
+### Code Validation
 
 - The python code was passed through the [CI Python Linter](https://pep8ci.herokuapp.com/) without any errors.
 
