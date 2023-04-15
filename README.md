@@ -119,18 +119,44 @@ There are no unfixed bugs
 
 ## Deployment
 
-### Deploy to Heroku
+### Clone the repository to create a local copy 
+
+- On GitHub.com navigate to the main page of the repository.
+- Above the list of files you should see the code button click this and you will be given the below options
+- Copy the URL for the repository
+    - To clone the repository using HTTPS, under "HTTPS", click copy.
+    - To clone the repository using an SSH key, click SSH, then click copy.
+    - To clone a repository using GitHub CLI, click GitHub CLI, then click copy.
+- Open Terminal in GitPod.
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone, and then paste the URL you copied earlier.
+- Press Enter to create your local clone.
+
+### Fork the Repository
+
+- On GitHub.com, navigate to the repository.
+- In the top-right corner of the page, click Fork.
+- Select an owner for the forked repository.
+- By default, forks are named the same as their upstream repositories. You can change the name of the fork to distinguish it further.
+- Optionally, add a description of your fork.
+- Choose whether to copy only the default branch or all branches to the new fork. For many forking scenarios, such as contributing to open-source projects, you only need to copy the default branch. By default, only the default branch is copied.
+- Click Create fork.
+
+### Local Deployment
+
+- Clone the GitHub repository: Start by cloning the repository from GitHub to your local machine using a Git client, such as Git CLI or GitKraken.
+- Install the required dependencies: Once you have the repository on your local machine, you need to install any dependencies that are required for the project. This may include packages, libraries, or frameworks that the project relies on.
+- Configure the environment variables: Next, you need to configure the environment variables that the project uses. These variables may include API keys, database credentials, or any other configuration options that the project relies on.
+- Build and run the project: After you have installed the dependencies and configured the environment variables, you can build and run the project on your local machine. Depending on the type of project you are working on, you may need to run specific commands or scripts to build and start the project.
+- Finally, you should test and debug the project to ensure that it is running correctly on your local machine. 
+
+### Remote Deploment to Heroku
 
 - Create a new app on Heroku by clicking the "New" button on your Heroku dashboard and selecting "Create new app." Give your app a name and select the region you want to deploy to (US or Europe).
-
 - Configure your Heroku app by adding any necessary environment variables or add-ons your app needs to run. You can do this by going to the "Settings" tab on your app's dashboard.
-
 - Connect your Heroku app to your GitHub repository by going to the "Deploy" tab on your app's dashboard and selecting "GitHub" as your deployment method. Then, connect to the repository that contains the code you want to deploy.
-
 - Choose the branch you want to deploy from your GitHub repository. You can also set up automatic deploys so that your app is automatically deployed to Heroku whenever you push changes to your chosen branch.
-
 - Deploy your app by clicking the "Deploy Branch" button on the "Deploy" tab. Heroku will build and deploy your app from the code on your selected branch.
-
 - Monitor your app's deployment and check its logs for any errors or issues that arise. You can view your app's logs by going to the "More" menu on your app's dashboard and selecting "View logs."
 
 ## Credits
@@ -142,5 +168,6 @@ I have listed the main sites that have helped me complete this project. I spent 
 - This site was extremely helpful and showed me multiple options to code this game. [Invent with Python](https://inventwithpython.com).
 - How to build hangman tutorial by Kite on [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) was very helpful.
 - My ASCII art was taken from KeoCode's GitHub repository [Keo Code](https://github.com/KeoCode/Hangman).
+- Background on the origins of the Hangman game [Quora]!(https://www.quora.com/What-is-the-origin-of-the-game-hangman).
 
 
